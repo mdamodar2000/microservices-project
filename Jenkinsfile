@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t mdamodar775/checkoutservice:latest ."
+                        sh "docker build -t damodar775/checkoutservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push mdamodar775/checkoutservice:latest "
+                        sh "docker push damodar775/checkoutservice:latest "
                     }
                 }
             }
